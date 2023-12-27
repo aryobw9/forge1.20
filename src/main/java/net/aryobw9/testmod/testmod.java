@@ -2,6 +2,7 @@ package net.aryobw9.testmod;
 
 import com.mojang.logging.LogUtils;
 import net.aryobw9.testmod.block.ModBlocks;
+import net.aryobw9.testmod.entity.ModEntities;
 import net.aryobw9.testmod.item.ModCreativeModTabs;
 import net.aryobw9.testmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,6 +36,7 @@ public class testmod
         ModCreativeModTabs.register(modEventBus);
         Moditems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
