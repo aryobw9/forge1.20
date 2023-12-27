@@ -2,6 +2,9 @@ package net.aryobw9.testmod.entity.custom;
 
 import net.aryobw9.testmod.entity.ModEntities;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -27,20 +30,21 @@ public class DwarfEntity extends Animal {
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 2d));
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.150, Ingredient.of(Items.GOLD_NUGGET),false));
         this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 4f));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(5,new BreedGoal(this, 4d));
+        this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 
     }
 
     public static AttributeSupplier.Builder createAttribute(){
         return Animal.createLivingAttributes()
                 .add(Attributes.ATTACK_DAMAGE, 4d)
-                .add(Attributes.FOLLOW_RANGE, 5d)
+                .add(Attributes.FOLLOW_RANGE, 10d)
                 .add(Attributes.MAX_HEALTH, 10d)
-                .add(Attributes.MOVEMENT_SPEED, 29d)
+                .add(Attributes.MOVEMENT_SPEED, 0.23d)
                 .add(Attributes.ARMOR, 4f)
                 .add(Attributes.ATTACK_KNOCKBACK, 1f)
                 .add(Attributes.ATTACK_SPEED, 5d)
-                .add(Attributes.JUMP_STRENGTH, 10d);
+                .add(Attributes.JUMP_STRENGTH, 1d);
     }
     @Nullable
     @Override
@@ -51,4 +55,23 @@ public class DwarfEntity extends Animal {
     public boolean isFood(ItemStack pStack){
         return pStack.is(Items.GOLD_NUGGET);
     }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.VILLAGER_DEATH;
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return SoundEvents.SCULK_CLICKING_STOP;
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.WARDEN_AMBIENT;
+    }
+
 }

@@ -3,8 +3,10 @@ package net.aryobw9.testmod;
 import com.mojang.logging.LogUtils;
 import net.aryobw9.testmod.block.ModBlocks;
 import net.aryobw9.testmod.entity.ModEntities;
+import net.aryobw9.testmod.entity.client.DwarfRenderer;
 import net.aryobw9.testmod.item.ModCreativeModTabs;
 import net.aryobw9.testmod.item.Moditems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -20,6 +22,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import javax.swing.text.html.parser.Entity;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(testmod.MODID)
@@ -79,6 +83,7 @@ public class testmod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.DWARF.get(), DwarfRenderer::new);
 
         }
     }

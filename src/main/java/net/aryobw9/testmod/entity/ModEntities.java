@@ -2,7 +2,6 @@ package net.aryobw9.testmod.entity;
 
 import net.aryobw9.testmod.entity.custom.DwarfEntity;
 import net.aryobw9.testmod.testmod;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;

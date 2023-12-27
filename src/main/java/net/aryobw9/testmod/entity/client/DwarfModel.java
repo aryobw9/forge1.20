@@ -33,25 +33,25 @@ public class DwarfModel<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition Main_Body = Dwarf.addOrReplaceChild("Main_Body", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition pickaxe = Main_Body.addOrReplaceChild("pickaxe", CubeListBuilder.create().texOffs(37, 56).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(38, 55).addBox(1.0F, 1.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(41, 52).addBox(2.0F, 2.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(44, 49).addBox(3.0F, 3.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(47, 46).addBox(4.0F, 4.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(50, 43).addBox(5.0F, 5.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 43).addBox(5.0F, 4.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 43).addBox(6.0F, 5.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 43).addBox(4.0F, 3.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 43).addBox(3.0F, 2.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 43).addBox(2.0F, 1.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 43).addBox(1.0F, 0.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 46).addBox(0.5F, 1.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 46).addBox(1.5F, 2.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 46).addBox(2.5F, 3.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 46).addBox(3.5F, 4.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 46).addBox(4.5F, 5.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(51, 46).addBox(5.5F, 6.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(57, 44).addBox(7.5F, 6.0F, 0.0F, 1.5F, -2.25F, 0.5F, new CubeDeformation(0.0F))
-		.texOffs(53, 40).addBox(6.0F, 6.0F, 0.0F, 2.5F, 2.5F, 0.5F, new CubeDeformation(0.0F)), PartPose.offset(-4.75F, -12.75F, -1.0F));
+				.texOffs(38, 55).addBox(1.0F, 1.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(41, 52).addBox(2.0F, 2.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(44, 49).addBox(3.0F, 3.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(47, 46).addBox(4.0F, 4.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(50, 43).addBox(5.0F, 5.0F, 0.0F, 1.0F, 1.0F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 43).addBox(5.0F, 4.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 43).addBox(6.0F, 5.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 43).addBox(4.0F, 3.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 43).addBox(3.0F, 2.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 43).addBox(2.0F, 1.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 43).addBox(1.0F, 0.5F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 46).addBox(0.5F, 1.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 46).addBox(1.5F, 2.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 46).addBox(2.5F, 3.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 46).addBox(3.5F, 4.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 46).addBox(4.5F, 5.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(51, 46).addBox(5.5F, 6.0F, 0.0F, 0.5F, 0.5F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(57, 44).addBox(7.5F, 6.0F, 0.0F, 1.5F, -2.25F, 0.5F, new CubeDeformation(0.0F))
+				.texOffs(53, 40).addBox(6.0F, 6.0F, 0.0F, 2.5F, 2.5F, 0.5F, new CubeDeformation(0.0F)), PartPose.offset(-4.75F, -12.75F, -1.0F));
 
 		PartDefinition pick_sar2_r1 = pickaxe.addOrReplaceChild("pick_sar2_r1", CubeListBuilder.create().texOffs(57, 44).addBox(-1.375F, -0.245F, -0.25F, 1.5F, -2.25F, 0.5F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(6.25F, 7.625F, 0.25F, 0.0F, 0.0F, -1.5708F));
 
@@ -68,8 +68,8 @@ public class DwarfModel<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition Main_Head = Dwarf.addOrReplaceChild("Main_Head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition helmet = Main_Head.addOrReplaceChild("helmet", CubeListBuilder.create().texOffs(28, 11).addBox(-3.25F, -19.0F, -6.25F, 6.5F, 1.0F, 6.5F, new CubeDeformation(0.0F))
-		.texOffs(29, 25).addBox(-3.0F, -20.0F, -6.0F, 6.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
-		.texOffs(19, 32).addBox(-1.0F, -20.25F, -6.25F, 2.0F, 1.25F, 6.5F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+				.texOffs(29, 25).addBox(-3.0F, -20.0F, -6.0F, 6.0F, 1.0F, 6.0F, new CubeDeformation(0.0F))
+				.texOffs(19, 32).addBox(-1.0F, -20.25F, -6.25F, 2.0F, 1.25F, 6.5F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition head = Main_Head.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, -8.0F, 0.0F));
 
@@ -80,12 +80,12 @@ public class DwarfModel<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition nose_r1 = nose.addOrReplaceChild("nose_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-1.0F, -15.0F, -6.25F, 2.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 9.0F, 2.0F, -0.0873F, 0.0F, 0.0F));
 
 		PartDefinition moustache = Main_Head.addOrReplaceChild("moustache", CubeListBuilder.create().texOffs(22, 2).addBox(-2.0F, -13.0F, -7.0F, 4.0F, 0.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(25, 1).addBox(2.0F, -14.0F, -7.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(24, 0).addBox(-2.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
-		.texOffs(24, 0).addBox(1.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
-		.texOffs(25, 1).addBox(-3.0F, -14.0F, -7.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(24, 0).addBox(3.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
-		.texOffs(24, 0).addBox(-4.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+				.texOffs(25, 1).addBox(2.0F, -14.0F, -7.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(24, 0).addBox(-2.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+				.texOffs(24, 0).addBox(1.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+				.texOffs(25, 1).addBox(-3.0F, -14.0F, -7.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(24, 0).addBox(3.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+				.texOffs(24, 0).addBox(-4.0F, -13.5F, -7.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
