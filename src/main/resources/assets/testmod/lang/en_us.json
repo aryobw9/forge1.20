@@ -3,6 +3,7 @@
   "item.testmod.raw_sapphire": "RAW SAP HERE",
 
   "block.testmod.sapphire_block": "Block of Sapphire",
+  "block.testmod.raw_sapphire_block": "Block of Raw Sapphire",
 
   "creativetab.test_tab": "TEST"
 }

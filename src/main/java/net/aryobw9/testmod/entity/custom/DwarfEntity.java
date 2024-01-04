@@ -6,7 +6,9 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -21,6 +23,36 @@ import org.jetbrains.annotations.Nullable;
 public class DwarfEntity extends Animal {
     public DwarfEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+    }
+    public final AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationTimeOut = 0;
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (this.level().isClientSide()){
+            setupAnimationState();
+
+        }
+    }
+    private void setupAnimationState(){
+        if (this.idleAnimationTimeOut<=0){
+            this.idleAnimationTimeOut = this.random.nextInt(40)+80;
+            this.idleAnimationState.start(this.tickCount);
+        }else {
+            --this.idleAnimationTimeOut;
+        }
+    }
+
+    @Override
+    protected void updateWalkAnimation(float pPartialTick) {
+        float f;
+        if (this.getPose()== Pose.STANDING){
+            f = Math.min(pPartialTick = 6f, 1f);
+        } else {
+            f= 0f;
+        }
+        this.walkAnimation.update(f,0.2f);
     }
 
     @Override
